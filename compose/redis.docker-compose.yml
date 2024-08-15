@@ -1,0 +1,41 @@
+version: '3.9'
+services:
+  redis:
+    container_name: redis
+    image: redis
+    restart: always
+    command:
+      - 'redis-server'
+      - '--loglevel ${REDIS_LOGLEVEL:-warning}'
+      - '--databases 2'
+      - '--save 900 1'
+      - '--save 300 10'
+      - '--save 60 10000'
+      - '--maxmemory ${REDIS_MAXMEM:-50mb}'
+      - '--maxmemory-policy ${REDIS_POLICY:-noeviction}'
+    volumes:
+      - ../.cache/redis:/data
+    ports:
+      - '6379:6379'
+
+  bullmq-gateway:
+    container_name: bullmq-gateway
+    build:
+      context: ../
+      dockerfile: Dockerfile
+    command: ['bullmq-gateway']
+    restart: always
+    ports:
+      - '3030:3000'
+    environment:
+      - SHARED_CONNECTOR_BULL_REDIS_HOST=redis
+      - SHARED_CONNECTOR_BULL_REDIS_PORT=6379
+      - SHARED_CONNECTOR_BULL_REDIS_DB=0
+      - SHARED_CONNECTOR_BULL_REDIS_USER=
+      - SHARED_CONNECTOR_BULL_REDIS_PASSWORD=
+      - SHARED_CONNECTOR_BULL_REDIS_USE_TLS=false
+      - SERVICE_BULLMQ_GATEWAY_PORT=3000
+    links:
+      - redis
+    depends_on:
+      - redis

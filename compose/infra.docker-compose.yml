@@ -1,0 +1,36 @@
+version: '3.9'
+services:
+  nats:
+    extends:
+      file: nats.docker-compose.yml
+      service: nats
+  nats-1:
+    extends:
+      file: nats.docker-compose.yml
+      service: nats-1
+  nats-2:
+    extends:
+      file: nats.docker-compose.yml
+      service: nats-1
+
+  postgres:
+    extends:
+      file: postgres.docker-compose.yml
+      service: postgres
+  postgres-admin:
+    extends:
+      file: postgres.docker-compose.yml
+      service: postgres-admin
+
+  redis:
+    extends:
+      file: redis.docker-compose.yml
+      service: redis
+  bullmq-gateway:
+    extends:
+      file: redis.docker-compose.yml
+      service: bullmq-gateway
+
+networks:
+  nats:
+    name: nats

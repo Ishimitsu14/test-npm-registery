@@ -1,0 +1,341 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "monorepo": true,
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": false
+  },
+  "projects": {
+    "@services/admin-gateway": {
+      "type": "application",
+      "root": "services/admin-gateway",
+      "entryFile": "main",
+      "sourceRoot": "services/admin-gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "services/admin-gateway/tsconfig.app.json"
+      }
+    },
+    "@services/bullmq-gateway": {
+      "type": "application",
+      "root": "services/bullmq-gateway",
+      "entryFile": "main",
+      "sourceRoot": "services/bullmq-gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "services/bullmq-gateway/tsconfig.app.json"
+      }
+    },
+    "@services/desk-gateway": {
+      "type": "application",
+      "root": "services/desk-gateway",
+      "entryFile": "main",
+      "sourceRoot": "services/desk-gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "services/desk-gateway/tsconfig.app.json"
+      }
+    },
+    "@services/tg-gateway": {
+      "type": "application",
+      "root": "services/tg-gateway",
+      "entryFile": "main",
+      "sourceRoot": "services/tg-gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "services/tg-gateway/tsconfig.app.json"
+      }
+    },
+    "@services/user-identity": {
+      "type": "application",
+      "root": "services/user-identity",
+      "entryFile": "main",
+      "sourceRoot": "services/user-identity/src",
+      "compilerOptions": {
+        "tsConfigPath": "services/user-identity/tsconfig.app.json"
+      }
+    },
+    "@services/file-management": {
+      "type": "application",
+      "root": "services/file-management",
+      "entryFile": "main",
+      "sourceRoot": "services/file-management/src",
+      "compilerOptions": {
+        "tsConfigPath": "services/file-management/tsconfig.app.json"
+      }
+    },
+    "@services/lot-management": {
+      "type": "application",
+      "root": "services/lot-management",
+      "entryFile": "main",
+      "sourceRoot": "services/lot-management/src",
+      "compilerOptions": {
+        "tsConfigPath": "services/lot-management/tsconfig.app.json"
+      }
+    },
+    "@services/notification": {
+      "type": "application",
+      "root": "services/notification",
+      "entryFile": "main",
+      "sourceRoot": "services/notification/src",
+      "compilerOptions": {
+        "tsConfigPath": "services/notification/tsconfig.app.json"
+      }
+    },
+    "@services/note": {
+      "type": "application",
+      "root": "services/note",
+      "entryFile": "main",
+      "sourceRoot": "services/note/src",
+      "compilerOptions": {
+        "tsConfigPath": "services/note/tsconfig.app.json"
+      }
+    },
+    "@services/feedback": {
+      "type": "application",
+      "root": "services/feedback",
+      "entryFile": "main",
+      "sourceRoot": "services/feedback/src",
+      "compilerOptions": {
+        "tsConfigPath": "services/feedback/tsconfig.app.json"
+      }
+    },
+
+    "@ddd/application": {
+      "type": "library",
+      "root": "packages/ddd/application",
+      "entryFile": "index",
+      "sourceRoot": "packages/ddd/application/src",
+      "compilerOptions": {
+        "tsConfigPath": "packages/ddd/application/tsconfig.lib.json"
+      }
+    },
+    "@ddd/core": {
+      "type": "library",
+      "root": "packages/ddd/core",
+      "entryFile": "index",
+      "sourceRoot": "packages/ddd/core/src",
+      "compilerOptions": {
+        "tsConfigPath": "packages/ddd/core/tsconfig.lib.json"
+      }
+    },
+    "@ddd/domain": {
+      "type": "library",
+      "root": "packages/ddd/domain",
+      "entryFile": "index",
+      "sourceRoot": "packages/ddd/domain/src",
+      "compilerOptions": {
+        "tsConfigPath": "packages/ddd/domain/tsconfig.lib.json"
+      }
+    },
+    "@ddd/events": {
+      "type": "library",
+      "root": "packages/ddd/events",
+      "entryFile": "index",
+      "sourceRoot": "packages/ddd/events/src",
+      "compilerOptions": {
+        "tsConfigPath": "packages/ddd/events/tsconfig.lib.json"
+      }
+    },
+    "@ddd/examples": {
+      "type": "library",
+      "root": "packages/ddd/examples",
+      "entryFile": "index",
+      "sourceRoot": "packages/ddd/examples/src",
+      "compilerOptions": {
+        "tsConfigPath": "packages/ddd/examples/tsconfig.lib.json"
+      }
+    },
+    "@ddd/infra": {
+      "type": "library",
+      "root": "packages/ddd/infra",
+      "entryFile": "index",
+      "sourceRoot": "packages/ddd/infra/src",
+      "compilerOptions": {
+        "tsConfigPath": "packages/ddd/infra/tsconfig.lib.json"
+      }
+    },
+    "@ddd/specifications": {
+      "type": "library",
+      "root": "packages/ddd/specifications",
+      "entryFile": "index",
+      "sourceRoot": "packages/ddd/specifications/src",
+      "compilerOptions": {
+        "tsConfigPath": "packages/ddd/specifications/tsconfig.lib.json"
+      }
+    },
+
+    "@packages/berish-context": {
+      "type": "library",
+      "root": "packages/berish-context",
+      "entryFile": "index",
+      "sourceRoot": "packages/berish-context/src",
+      "compilerOptions": {
+        "tsConfigPath": "packages/berish-context/tsconfig.lib.json"
+      }
+    },
+    "@packages/berish-rpc-client": {
+      "type": "library",
+      "root": "packages/berish-rpc-client",
+      "entryFile": "index",
+      "sourceRoot": "packages/berish-rpc-client/src",
+      "compilerOptions": {
+        "tsConfigPath": "packages/berish-rpc-client/tsconfig.lib.json"
+      }
+    },
+    "@packages/berish-rpc-router": {
+      "type": "library",
+      "root": "packages/berish-rpc-router",
+      "entryFile": "index",
+      "sourceRoot": "packages/berish-rpc-router/src",
+      "compilerOptions": {
+        "tsConfigPath": "packages/berish-rpc-router/tsconfig.lib.json"
+      }
+    },
+    "@packages/berish-rpc-server": {
+      "type": "library",
+      "root": "packages/berish-rpc-server",
+      "entryFile": "index",
+      "sourceRoot": "packages/berish-rpc-server/src",
+      "compilerOptions": {
+        "tsConfigPath": "packages/berish-rpc-server/tsconfig.lib.json"
+      }
+    },
+    "@packages/berish-rpc-express": {
+      "type": "library",
+      "root": "packages/berish-rpc-server-express",
+      "entryFile": "index",
+      "sourceRoot": "packages/berish-rpc-server-express/src",
+      "compilerOptions": {
+        "tsConfigPath": "packages/berish-rpc-server-express/tsconfig.lib.json"
+      }
+    },
+    "@packages/env-config": {
+      "type": "library",
+      "root": "packages/env-config",
+      "entryFile": "index",
+      "sourceRoot": "packages/env-config/src",
+      "compilerOptions": {
+        "tsConfigPath": "packages/env-config/tsconfig.lib.json"
+      }
+    },
+    "@packages/nestjs-api-rpc": {
+      "type": "library",
+      "root": "packages/nestjs-api-rpc",
+      "entryFile": "index",
+      "sourceRoot": "packages/nestjs-api-rpc/src",
+      "compilerOptions": {
+        "tsConfigPath": "packages/nestjs-api-rpc/tsconfig.lib.json"
+      }
+    },
+    "@packages/rpc-server": {
+      "type": "library",
+      "root": "packages/rpc-server",
+      "entryFile": "index",
+      "sourceRoot": "packages/rpc-server/src",
+      "compilerOptions": {
+        "tsConfigPath": "packages/rpc-server/tsconfig.lib.json"
+      }
+    },
+
+    "@shared/config": {
+      "type": "library",
+      "root": "shared/config",
+      "entryFile": "index",
+      "sourceRoot": "shared/config/src",
+      "compilerOptions": {
+        "tsConfigPath": "shared/config/tsconfig.lib.json"
+      }
+    },
+    "@shared/connectors": {
+      "type": "library",
+      "root": "shared/connectors",
+      "entryFile": "index",
+      "sourceRoot": "shared/connectors/src",
+      "compilerOptions": {
+        "tsConfigPath": "shared/connectors/tsconfig.lib.json"
+      }
+    },
+    "@shared/db": {
+      "type": "library",
+      "root": "shared/db",
+      "entryFile": "index",
+      "sourceRoot": "shared/db/src",
+      "compilerOptions": {
+        "tsConfigPath": "shared/db/tsconfig.lib.json"
+      }
+    },
+    "@shared/events": {
+      "type": "library",
+      "root": "shared/events",
+      "entryFile": "index",
+      "sourceRoot": "shared/events/src",
+      "compilerOptions": {
+        "tsConfigPath": "shared/events/tsconfig.lib.json"
+      }
+    },
+    "@schema/common": {
+      "type": "library",
+      "root": "shared/schema/common",
+      "entryFile": "index",
+      "sourceRoot": "shared/schema/common/src",
+      "compilerOptions": {
+        "tsConfigPath": "shared/schema/common/tsconfig.lib.json"
+      }
+    },
+    "@schema/file-management": {
+      "type": "library",
+      "root": "shared/schema/file-management",
+      "entryFile": "index",
+      "sourceRoot": "shared/schema/file-management/src",
+      "compilerOptions": {
+        "tsConfigPath": "shared/schema/file-management/tsconfig.lib.json"
+      }
+    },
+    "@schema/lot-management": {
+      "type": "library",
+      "root": "shared/schema/lot-management",
+      "entryFile": "index",
+      "sourceRoot": "shared/schema/lot-management/src",
+      "compilerOptions": {
+        "tsConfigPath": "shared/schema/lot-management/tsconfig.lib.json"
+      }
+    },
+    "@schema/user-identity": {
+      "type": "library",
+      "root": "shared/schema/user-identity",
+      "entryFile": "index",
+      "sourceRoot": "shared/schema/user-identity/src",
+      "compilerOptions": {
+        "tsConfigPath": "shared/schema/user-identity/tsconfig.lib.json"
+      }
+    },
+
+    "@schema/note": {
+      "type": "library",
+      "root": "shared/schema/note",
+      "entryFile": "index",
+      "sourceRoot": "shared/schema/note/src",
+      "compilerOptions": {
+        "tsConfigPath": "shared/schema/note/tsconfig.lib.json"
+      }
+    },
+
+    "@schema/feedback": {
+      "type": "library",
+      "root": "shared/schema/feedback",
+      "entryFile": "index",
+      "sourceRoot": "shared/schema/feedback/src",
+      "compilerOptions": {
+        "tsConfigPath": "shared/schema/feedback/tsconfig.lib.json"
+      }
+    },
+
+    "@shared/utils": {
+      "type": "library",
+      "root": "shared/utils",
+      "entryFile": "index",
+      "sourceRoot": "shared/utils/src",
+      "compilerOptions": {
+        "tsConfigPath": "shared/utils/tsconfig.lib.json"
+      }
+    }
+  }
+}
