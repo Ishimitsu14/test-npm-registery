@@ -1,11 +1,23 @@
 {
-  "name": "@mbase-ishimitsu/schema-admin-gateway",
-  "version": "1.0.0",
-  "main": "index.js",
-  "files": [
-    "**/*"
-  ],
+  "name": "@ishimitsu-org/schema-admin-gateway",
+  "version": "7.0.0",
+  "type": "module",
+  "types": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "publishConfig": {
+    "exports": {
+      ".": "./dist/index.js"
+    },
+    "types": "./dist/index.d.ts",
     "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "*"
   }
 }

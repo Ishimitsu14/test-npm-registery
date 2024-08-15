@@ -1,6 +1,6 @@
+import { AdminGatewaySchema } from '@ishimitsu-org/schema-admin-gateway';
 import { Inject, UseInterceptors } from '@nestjs/common';
 import { NestRpcController, NestRpcMethod, useRpcRequestInfo } from '@packages/nestjs-rpc-server';
-import { AdminGatewaySchema } from '@schema/admin-gateway';
 
 import { LotQuestionService } from '../../Application';
 import { OnlyAuthorizedGuard } from '../Guards';

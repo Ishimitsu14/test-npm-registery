@@ -10,7 +10,7 @@
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./",
-    "incremental": true,
+    "incremental": false,
     "skipLibCheck": true,
     "noImplicitAny": false,
     "noFallthroughCasesInSwitch": false,
@@ -63,7 +63,6 @@
       "@shared/utils": ["shared/utils/src"],
       "@shared/validation": ["shared/validation/src"],
 
-      "@schema/admin-gateway": ["shared/schema/admin-gateway/src"],
       "@schema/common": ["shared/schema/common/src"],
       "@schema/core": ["shared/schema/core/src"],
       "@schema/desk-gateway": ["shared/schema/desk-gateway/src"],
