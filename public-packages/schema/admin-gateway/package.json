@@ -1,0 +1,11 @@
+{
+  "name": "@mbase-ishimitsu/schema-admin-gateway",
+  "version": "1.0.0",
+  "main": "index.js",
+  "files": [
+    "**/*"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
+}
