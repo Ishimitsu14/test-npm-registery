@@ -14,7 +14,8 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "@schema/core": "../../../shared/schema/core/src"
   },
   "devDependencies": {
     "ts-node": "^10.9.2",
