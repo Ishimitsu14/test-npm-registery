@@ -1,0 +1,27 @@
+{
+  "name": "@ishimitsu-org/ddd",
+  "version": "1.0.0",
+  "type": "module",
+  "main": ".",
+  "exports": {
+    "/application": "./application/index.ts",
+    "/core": "./core/index.ts",
+    "/domain": "./domain/index.ts",
+    "/errors": "./errors/index.ts",
+    "/events": "./events/index.ts",
+    "/infra": "./infra/index.ts",
+    "/specifications": "./specifications/index.ts",
+    "/validation": "./validation/index.ts"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "@berish/class": "^1.0.2",
+    "@berish/linq": "^1.2.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "*"
+  }
+}

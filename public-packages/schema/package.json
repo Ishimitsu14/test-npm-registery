@@ -1,0 +1,22 @@
+{
+  "name": "@ishimitsu-org/schema",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    "/adming-gateway": "./admin-gateway/index.ts",
+    "/core": "./core/index.ts"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {},
+  "dependencies": {
+    "@ishimitsu-org/ddd": "^1.0.0",
+    "@ishimitsu-org/rpc-client": "^1.0.0",
+    "@ishimitsu-org/rpc-client-schema": "^1.0.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "*"
+  }
+}

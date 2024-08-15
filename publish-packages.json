@@ -1,0 +1,8 @@
+{
+  "packages": [
+    "public-packages/schema",
+    "public-packages/ddd",
+    "public-packages/berish-rpc-client",
+    "public-packages/berish-rpc-client-schema"
+  ]
+}
